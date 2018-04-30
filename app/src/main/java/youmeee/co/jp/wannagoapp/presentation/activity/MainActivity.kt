@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
-import butterknife.OnClick
 import youmeee.co.jp.wannagoapp.R
 import youmeee.co.jp.wannagoapp.presentation.fragment.ListFragment
 
@@ -29,8 +28,7 @@ class MainActivity : AppCompatActivity() {
             onClickFAB()
         }
     }
-
-    @OnClick(R.id.fab)
+    
     fun onClickFAB() {
         val intent = Intent(this, InputActivity::class.java)
         startActivity(intent)
