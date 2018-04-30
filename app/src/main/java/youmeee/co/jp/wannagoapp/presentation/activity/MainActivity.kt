@@ -1,14 +1,18 @@
 package youmeee.co.jp.wannagoapp.presentation.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
+import butterknife.OnClick
 import youmeee.co.jp.wannagoapp.R
 import youmeee.co.jp.wannagoapp.presentation.fragment.ListFragment
 
 class MainActivity : AppCompatActivity() {
 
     private var fragment: android.support.v4.app.Fragment? = null
+    private val requestCode = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,5 +24,15 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener { v ->
+            onClickFAB()
+        }
+    }
+
+    @OnClick(R.id.fab)
+    fun onClickFAB() {
+        val intent = Intent(this, InputActivity::class.java)
+        startActivity(intent)
     }
 }
