@@ -1,8 +1,10 @@
-package youmeee.co.jp.wannagoapp
+package youmeee.co.jp.wannagoapp.presentation.activity
 
 import android.os.Bundle
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
+import youmeee.co.jp.wannagoapp.presentation.fragment.ListFragment
+import youmeee.co.jp.wannagoapp.R
 
 class MainActivity : AppCompatActivity() {
 

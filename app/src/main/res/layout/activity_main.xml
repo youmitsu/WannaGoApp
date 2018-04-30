@@ -4,6 +4,6 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="youmeee.co.jp.wannagoapp.MainActivity">
+    tools:context="youmeee.co.jp.wannagoapp.presentation.activity.MainActivity">
 
 </RelativeLayout>

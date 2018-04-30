@@ -1,4 +1,4 @@
-package youmeee.co.jp.wannagoapp
+package youmeee.co.jp.wannagoapp.presentation.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import youmeee.co.jp.wannagoapp.R
 
 /**
  * Created by yumitsuhori on 2018/04/23.

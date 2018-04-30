@@ -1,9 +1,10 @@
-package youmeee.co.jp.wannagoapp
+package youmeee.co.jp.wannagoapp.presentation.customview
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import youmeee.co.jp.wannagoapp.R
 
 /**
  * Created by yumitsuhori on 2018/04/16.
