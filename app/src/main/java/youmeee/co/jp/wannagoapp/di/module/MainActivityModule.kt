@@ -6,17 +6,17 @@ import dagger.Module
 import dagger.android.ActivityKey
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
-import youmeee.co.jp.wannagoapp.di.component.MainActivitySubComponent
+import youmeee.co.jp.wannagoapp.di.component.MainActivitySubcomponent
 import youmeee.co.jp.wannagoapp.presentation.activity.MainActivity
 
 /**
- * Created by yumitsuhori on 2018/05/13.
+ * Created by yumitsuhori on 2018/05/14.
  */
 @Module(subcomponents = arrayOf(
-        MainActivitySubComponent::class))
+        MainActivitySubcomponent::class))
 abstract class MainActivityModule {
     @Binds
     @IntoMap
     @ActivityKey(MainActivity::class)
-    abstract fun bindHogeActivityInjectorFactory(builder: MainActivitySubComponent.Builder): AndroidInjector.Factory<in Activity>
+    abstract fun bindMainActivityInjectorFactory(builder: MainActivitySubcomponent.Builder): AndroidInjector.Factory<out Activity>
 }
