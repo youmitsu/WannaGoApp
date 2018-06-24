@@ -4,13 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.FragmentTransaction
-import dagger.android.AndroidInjection
+import android.support.v7.app.AppCompatActivity
 import youmeee.co.jp.wannagoapp.R
 import youmeee.co.jp.wannagoapp.presentation.fragment.ListFragment
 import youmeee.co.jp.wannagoapp.presentation.presenter.MainPresenter
 import youmeee.co.jp.wannagoapp.presentation.view.MainView
 
-class MainActivity : BaseActivity(), MainView {
+class MainActivity : AppCompatActivity(), MainView {
     private var fragment: android.support.v4.app.Fragment? = null
     private val requestCode = 1
 
@@ -18,8 +18,6 @@ class MainActivity : BaseActivity(), MainView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AndroidInjection.inject(this)
-
         setContentView(R.layout.activity_main)
 
         //       presenter.setView(this)
