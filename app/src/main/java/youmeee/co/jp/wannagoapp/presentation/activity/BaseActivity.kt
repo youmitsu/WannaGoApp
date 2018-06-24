@@ -11,7 +11,6 @@ import youmeee.co.jp.wannagoapp.WannaGoApp
 open class BaseActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
     }
 

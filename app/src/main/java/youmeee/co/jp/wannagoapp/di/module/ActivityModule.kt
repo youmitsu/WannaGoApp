@@ -1,18 +1,17 @@
 package youmeee.co.jp.wannagoapp.di.module
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
 import dagger.Module
 import dagger.Provides
 import youmeee.co.jp.wannagoapp.di.scope.PerActivity
+import youmeee.co.jp.wannagoapp.presentation.activity.MainActivity
 
 /**
- * Created by yumitsuhori on 2018/05/14.
+ * Created by yumitsuhori on 2018/05/13.
  */
 @Module
-class ActivityModule(val activity: AppCompatActivity) {
-
+class ActivityModule(private val activity: MainActivity) {
     @Provides
     @PerActivity
-    fun provideContext(): Context = activity
+    fun activity(): Activity = this.activity
 }
