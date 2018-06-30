@@ -3,6 +3,8 @@ package youmeee.co.jp.wannagoapp.presentation.activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import youmeee.co.jp.wannagoapp.R
 
 /**
@@ -17,7 +19,17 @@ class InputActivity() : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.input_menu, menu)
+
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.register_btn -> {
+                Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }
