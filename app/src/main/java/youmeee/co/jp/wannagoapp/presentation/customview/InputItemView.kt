@@ -2,7 +2,6 @@ package youmeee.co.jp.wannagoapp.presentation.customview
 
 import android.content.Context
 import android.text.InputFilter
-import android.text.InputType
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -14,7 +13,7 @@ import youmeee.co.jp.wannagoapp.R
  */
 class InputItemView : LinearLayout {
 
-    var itemName: String? = null
+    private var itemName: String? = null
 
     @JvmOverloads
     constructor(
@@ -34,11 +33,10 @@ class InputItemView : LinearLayout {
 
     private fun buildView() {
         item_title.text = itemName
-        item_edit.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         item_edit.filters = arrayOf(InputFilter.LengthFilter(20), inputFilter)
     }
 
-    var inputFilter: InputFilter = InputFilter { src, start, end, dest, dstart, dend ->
+    private val inputFilter: InputFilter = InputFilter { src, start, end, dest, dstart, dend ->
         src
     }
 }

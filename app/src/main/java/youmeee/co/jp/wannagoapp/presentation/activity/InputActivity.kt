@@ -10,7 +10,7 @@ import youmeee.co.jp.wannagoapp.R
 /**
  * Created by yumitsuhori on 2018/04/30.
  */
-class InputActivity() : AppCompatActivity() {
+class InputActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
