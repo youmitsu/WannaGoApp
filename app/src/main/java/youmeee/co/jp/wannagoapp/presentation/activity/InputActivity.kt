@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_input.*
 import youmeee.co.jp.wannagoapp.R
 
 /**
@@ -15,11 +16,14 @@ class InputActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
+
+        expected_date_area.setOnClickListener {
+            Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.input_menu, menu)
-
         return true
     }
 

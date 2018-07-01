@@ -10,4 +10,11 @@
         android:layout_height="wrap_content"
         app:itemName="場所名" />
 
+    <youmeee.co.jp.wannagoapp.presentation.customview.InputItemView
+        android:id="@+id/expected_date_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spot_name_area"
+        app:itemName="予定日" />
+
 </RelativeLayout>
