@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "51243066944",
+    "firebase_url": "https://wannagoapp-3e6b7.firebaseio.com",
+    "project_id": "wannagoapp-3e6b7",
+    "storage_bucket": "wannagoapp-3e6b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51243066944:android:dc262d291c3c0a8d",
+        "android_client_info": {
+          "package_name": "youmeee.co.jp.wannagoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51243066944-l17evqn0ds3ebu33vhtkl2kqiefqao4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAGTH6itm8MN3-A3-tHx6YjvulGHHaC0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
