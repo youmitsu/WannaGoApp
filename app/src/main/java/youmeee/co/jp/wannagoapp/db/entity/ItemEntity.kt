@@ -3,7 +3,6 @@ package youmeee.co.jp.wannagoapp.db.entity
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
-import android.graphics.Bitmap
 import org.threeten.bp.LocalDate
 
 /**
@@ -17,8 +16,6 @@ data class ItemEntity(
         val name: String,
         @ColumnInfo(name = "expected_date")
         val expectedDate: LocalDate,
-        @ColumnInfo(name = "thumbnail_img")
-        val thumbnailImg: Bitmap,
         @ColumnInfo(name = "thumbnail_url")
         val thumbnailUrl: String
 )
