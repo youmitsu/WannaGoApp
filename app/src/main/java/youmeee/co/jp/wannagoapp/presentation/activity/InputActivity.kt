@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_input.*
 import youmeee.co.jp.wannagoapp.R
 
@@ -20,6 +21,7 @@ class InputActivity : AppCompatActivity() {
         expected_date_area.setOnClickListener {
             Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show()
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -30,7 +32,16 @@ class InputActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.register_btn -> {
-                Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show()
+                val place = mapOf<String, Any>(Pair("name", "hoge"), Pair("expected", "hoge"))
+                val db = FirebaseFirestore.getInstance()
+                db.collection("place")
+                        .add(place)
+                        .addOnSuccessListener { documentReference ->
+                            Toast.makeText(this, documentReference.id, Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+                        }
             }
         }
         return super.onOptionsItemSelected(item)
