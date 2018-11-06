@@ -15,7 +15,7 @@ interface ItemDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun createItem(itemEntity: ItemEntity)
 
-    @Query("SELECT * FROM items ORDER BY expectedDate DESC")
+    @Query("SELECT * FROM items")
     fun getAllItems(): LiveData<List<ItemEntity>>
 
     @Query("DELETE FROM items")
